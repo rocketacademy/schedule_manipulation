@@ -3,6 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
+import 'package:schedule_manipulation/bootcamp_data.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Curriculum Visualizer',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -55,11 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void getData() async {
     try {
-      var jdata = await DefaultAssetBundle.of(context)
-          .loadString('data/bootcamp-course-days.json');
-      setState(() {
-        data = jsonDecode(jdata);
-      });
+      // var jdata = await DefaultAssetBundle.of(context)
+      //     .loadString('data/bootcamp-course-days.json');
+
+      // setState(() {
+      //   data = jsonDecode(jdata);
+      // });
+
+      data = bootcampData;
     } catch (e, s) {
       print('$e : $s');
     }
