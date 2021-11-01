@@ -54,11 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void getData() async {
-    var jdata = await DefaultAssetBundle.of(context)
-        .loadString('data/bootcamp-course-days.json');
-    setState(() {
-      data = jsonDecode(jdata);
-    });
+    try {
+      var jdata = await DefaultAssetBundle.of(context)
+          .loadString('data/bootcamp-course-days.json');
+      setState(() {
+        data = jsonDecode(jdata);
+      });
+    } catch (e, s) {
+      print('$e : $s');
+    }
 
     print(data?.keys);
   }
