@@ -48939,7 +48939,7 @@ s=q}while(true)switch(s){case 0:q=3
 j=n.c
 j.toString
 s=6
-return P.ax(T.a2j(j).T7("data/xbootcamp-course-days.json"),$async$f8)
+return P.ax(T.a2j(j).T7("data/bootcamp-course-days.json"),$async$f8)
 case 6:m=c
 n.aM(new F.Wd(n,m))
 q=1
