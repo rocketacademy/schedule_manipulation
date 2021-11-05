@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void getData() async {
     try {
       // var jdata = await DefaultAssetBundle.of(context)
-      //     .loadString('data/bootcamp-course-days.json');
+      //     .loadString('data/bootcamp-core-96-days.json');
 
       // setState(() {
       //   data = jsonDecode(jdata);
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       print('$e : $s');
     }
 
-    print(data?.keys);
+    // print(data?.keys);
   }
 
   @override
@@ -132,32 +132,37 @@ class DayDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: max(500, MediaQuery.of(context).size.width / 2),
-      child: Center(
-        child: Column(
-          children: [
-            ListTile(
-              leading: Text(
-                'Course Day',
+    return Card(
+      color: Colors.grey.shade300,
+      child: Container(
+        width: max(500, MediaQuery.of(context).size.width / 2),
+        child: Center(
+          child: Column(
+            children: [
+              ListTile(
+                leading: Text(
+                  'Course Day',
+                ),
+                title: Text(dayData['courseDay'].toString()),
               ),
-              title: Text(dayData['courseDay'].toString()),
-            ),
-            ListTile(
-              leading: Text('Module'),
-              title: Text(dayData['dateTypes']['module']),
-            ),
-            ClassListTile('General', dayData['dateTypes']['general'],
-                classColors['general']!),
-            ClassListTile(
-                'CSS', dayData['dateTypes']['css'], classColors['css']!),
-            ClassListTile(
-                'algos', dayData['dateTypes']['algos'], classColors['algos']!),
-            ClassListTile('ux', dayData['dateTypes']['ux'], classColors['ux']!),
-            ClassListTile('ip', dayData['dateTypes']['ip'], classColors['ip']!),
-            ClassListTile('projects', dayData['dateTypes']['projects'],
-                classColors['projects']!),
-          ],
+              ListTile(
+                leading: Text('Module'),
+                title: Text(dayData['dateTypes']['module']),
+              ),
+              ClassListTile('General', dayData['dateTypes']['general'],
+                  classColors['general']!),
+              ClassListTile(
+                  'CSS', dayData['dateTypes']['css'], classColors['css']!),
+              ClassListTile('algos', dayData['dateTypes']['algos'],
+                  classColors['algos']!),
+              ClassListTile(
+                  'ux', dayData['dateTypes']['ux'], classColors['ux']!),
+              ClassListTile(
+                  'ip', dayData['dateTypes']['ip'], classColors['ip']!),
+              ClassListTile('projects', dayData['dateTypes']['projects'],
+                  classColors['projects']!),
+            ],
+          ),
         ),
       ),
     );
@@ -173,11 +178,50 @@ class ClassListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      tileColor: color,
-      leading: Text(
-        title,
+        tileColor: color,
+        leading: Text(
+          title,
+        ),
+        title:
+            isEmpty(classData) ? Text('none') : ClassItemsListing(classData));
+  }
+}
+
+class ClassItemsListing extends StatelessWidget {
+  final Map classData;
+  const ClassItemsListing(this.classData);
+
+  Widget generateItems(List items) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items.map((e) => Text('    ${e['name']}')).toList(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          if (classData["preClass"].isNotEmpty) ...[
+            Text('Pre Class:'),
+            generateItems(classData["preClass"]['items']),
+            Divider(),
+          ],
+          if (classData["inClass"].isNotEmpty) ...[
+            Text('In Class:'),
+            generateItems(classData["inClass"]['items']),
+            Divider(),
+          ],
+          if (classData["postClass"].isNotEmpty) ...[
+            Text('Post Class:'),
+            generateItems(classData["postClass"]['items']),
+            Divider(),
+          ],
+        ],
       ),
-      title: isEmpty(classData) ? Text('none') : Text(classData.toString()),
     );
   }
 }
@@ -202,10 +246,11 @@ class DayColumn extends StatelessWidget {
                   child:
                       FittedBox(child: Text(dayData['courseDay'].toString()))),
               ...List.generate(
-                  classColors.length,
-                  (index) => ClassBox(
-                      dayData['dateTypes'][classColors.keys.toList()[index]],
-                      classColors.values.toList()[index])),
+                classColors.length,
+                (index) => ClassBox(
+                    dayData['dateTypes'][classColors.keys.toList()[index]],
+                    classColors.values.toList()[index]),
+              ),
               // MyBox(Colors.white,
               //     child:
               //         FittedBox(child: Text(dayData['courseDay'].toString()))),
@@ -223,7 +268,15 @@ class ClassBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isEmpty(lesson) ? MyBox(Colors.white) : MyBox(color);
+    Color displayColor;
+    if ((lesson['inClass'].toString().contains("Open Practice")) ||
+        (lesson['postClass'].toString().contains("Open Practice")) ||
+        (lesson['postClass'].toString().contains("Implementation")))
+      displayColor = color.withGreen(80); //color.withOpacity(0.5);
+
+    else
+      displayColor = color;
+    return isEmpty(lesson) ? MyBox(Colors.white) : MyBox(displayColor);
   }
 }
 
