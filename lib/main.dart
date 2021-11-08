@@ -1,10 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:flutter/services.dart';
-import 'package:schedule_manipulation/bootcamp_data.dart';
+import 'package:schedule_manipulation/model/bootcamp_data.dart';
+import 'package:schedule_manipulation/ui/curriculum_day_map.dart';
 
 import 'constants.dart';
 import 'ui/day_column.dart';
@@ -33,10 +31,9 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-const dayItems = ['general', 'css', 'algos', 'ux', 'ip', 'projects'];
-
 class _MyHomePageState extends State<MyHomePage> {
   int currentDayDisplayed = 0;
+  int currentDayDisplayedOrig = 0;
   Map? data;
   Map? dataFromJson;
 
@@ -97,12 +94,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void getData() async {
     try {
-      var jdata = await DefaultAssetBundle.of(context)
-          // .loadString('data/bootcamp-course-days.json');
-          .loadString('data/bootcamp-core-96-days.json');
+      var tempData = await generateBlankBootcampData();
+      // await getBootcampDataFromJson('data/bootcamp-core-96-days.json');
 
       setState(() {
-        data = jsonDecode(jdata);
+        data = tempData;
         // data = applyChanges(data);
       });
 
@@ -112,6 +108,19 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     // print(data?.keys);
+  }
+
+  void setActiveDay(int index) {
+    setState(() {
+      currentDayDisplayed = index;
+    });
+    print(data!['days'][index]);
+  }
+
+  void setActiveDayOrig(int index) {
+    setState(() {
+      currentDayDisplayedOrig = index;
+    });
   }
 
   @override
@@ -128,30 +137,23 @@ class _MyHomePageState extends State<MyHomePage> {
             : Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    height: boxDimension * 9,
-                    color: Colors.grey,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
+                  CurriculumDayMap(data!, activeDayCallback: setActiveDay),
+                  CurriculumDayMap(bootcampData,
+                      activeDayCallback: setActiveDayOrig),
+                  //newCurriculumDayMap(),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        ...List.generate(
-                            data?["days"].length,
-                            (index) => DayColumn(
-                                  data?["days"][index],
-                                  onTap: () {
-                                    // print(data?['days'][index]['dateTypes'].keys);
-                                    setState(() {
-                                      currentDayDisplayed = index;
-                                    });
-                                  },
-                                  highlight: currentDayDisplayed == index,
-                                ))
+                        SingleChildScrollView(
+                            child:
+                                DayDetail(data?["days"][currentDayDisplayed])),
+                        SingleChildScrollView(
+                            child: DayDetail(
+                                bootcampData["days"][currentDayDisplayedOrig])),
                       ],
                     ),
-                  ),
-                  Expanded(
-                    child: SingleChildScrollView(
-                        child: DayDetail(data?["days"][currentDayDisplayed])),
                   ),
                 ],
               ),

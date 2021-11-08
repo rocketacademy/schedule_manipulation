@@ -17,3 +17,5 @@ final classColors = {
   'ux': Colors.orange,
   'projects': Colors.deepPurple.shade200,
 };
+
+const dayItems = ['general', 'css', 'algos', 'ux', 'ip', 'projects'];

@@ -1,4 +1,161 @@
-var bootcampData = {
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:schedule_manipulation/constants.dart';
+
+var blankDay = {
+  "courseDay": -1,
+  "dateTypes": {
+    "module": "Module 1: Frontend Basics",
+    "general": {
+      "type": "general",
+      "preClass": {},
+      "inClass": {},
+      "postClass": {}
+    },
+    "css": {"type": "css", "preClass": {}, "inClass": {}, "postClass": {}},
+    "algos": {"type": "algos", "preClass": {}, "inClass": {}, "postClass": {}},
+    "ux": {"type": "ux", "preClass": {}, "inClass": {}, "postClass": {}},
+    "ip": {
+      "type": "ip",
+      "ipDue": {},
+      "preClass": {},
+      "inClass": {},
+      "postClass": {}
+    },
+    "projects": {
+      "type": "projects",
+      "projectStart": {},
+      "projectDue": {},
+      "preClass": {},
+      "inClass": {},
+      "postClass": {}
+    }
+  }
+};
+
+Map getBlankDay() {
+  return {
+    "courseDay": -1,
+    "dateTypes": {
+      "module": "Module 1: Frontend Basics",
+      "general": {
+        "type": "general",
+        "preClass": {},
+        "inClass": {},
+        "postClass": {}
+      },
+      "css": {"type": "css", "preClass": {}, "inClass": {}, "postClass": {}},
+      "algos": {
+        "type": "algos",
+        "preClass": {},
+        "inClass": {},
+        "postClass": {}
+      },
+      "ux": {"type": "ux", "preClass": {}, "inClass": {}, "postClass": {}},
+      "ip": {
+        "type": "ip",
+        "ipDue": {},
+        "preClass": {},
+        "inClass": {},
+        "postClass": {}
+      },
+      "projects": {
+        "type": "projects",
+        "projectStart": {},
+        "projectDue": {},
+        "preClass": {},
+        "inClass": {},
+        "postClass": {}
+      }
+    }
+  };
+}
+
+const Map bootcampDataHeaders = {
+  "repoUrls": {
+    "edit":
+        "https://github.com/rocketacademy/scheduler/edit/main/src/data/bootcamp-course-days.json"
+  },
+  "daysOfWeek": {
+    "fullTime": [1, 2, 3, 4, 5],
+    "partTime": [1, 6]
+  },
+  "courseStartIndex": 0,
+  "totalCourseDays": 0,
+  "days": []
+};
+
+Future<Map> generateBlankBootcampData() async {
+  Map data = Map.from(bootcampDataHeaders);
+  const NUM_DAYS = 96;
+  data['totalCourseDays'] = NUM_DAYS;
+  data['days'] = List.generate(NUM_DAYS, (index) {
+    Map day = getBlankDay();
+    day['courseDay'] = index;
+    return day;
+  });
+
+  data = await appendBootcampData(data);
+
+  return data;
+}
+
+Future<Map> loadAllData() async {
+  List general = await getBootcampDataFromJson('data/general.json');
+  List algos = await getBootcampDataFromJson('data/algos.json');
+  List css = await getBootcampDataFromJson('data/css.json');
+  List ip = await getBootcampDataFromJson('data/ip.json');
+  List ux = await getBootcampDataFromJson('data/ux.json');
+  List projects = await getBootcampDataFromJson('data/projects.json');
+
+  return {
+    'general': general,
+    'algos': algos,
+    'css': css,
+    'ip': ip,
+    'ux': ux,
+    'projects': projects,
+  };
+}
+
+Future<Map> appendBootcampData(Map data) async {
+  Map allData = await loadAllData();
+
+  List days = data['days'];
+  for (int i = 0; i < days.length; i++) {
+    // int i = 5;
+    // print(days[i]['dateTypes']['general']);
+    // print(general.where((element) => element['dayIndex'] == i));
+
+    allData.entries.forEach((entry) {
+      String entryName = entry.key;
+      List entryMap = entry.value;
+      var day = entryMap.where((element) => element['dayIndex'] == i);
+      if (day.length == 1) days[i]['dateTypes'][entryName] = day.first;
+    });
+
+    // var generalDay = general.where((element) => element['dayIndex'] == i);
+    // if (generalDay.length == 1)
+    //   days[i]['dateTypes']['general'] = generalDay.first;
+
+    // var algosDay = algos.where((element) => element['dayIndex'] == i);
+    // if (algosDay.length == 1)
+    //   days[i]['dateTypes']['algos'] =
+    //       algos.where((element) => element['dayIndex'] == i).first;
+  }
+
+  return data;
+}
+
+Future getBootcampDataFromJson(String assetPath) async {
+  var jdata = await rootBundle.loadString(assetPath);
+  //var jdata = await DefaultAssetBundle.of(context).loadString('data/bootcamp-course-days.json');
+  return jsonDecode(jdata);
+}
+
+Map<String, dynamic> bootcampData = {
   "repoUrls": {
     "edit":
         "https://github.com/rocketacademy/scheduler/edit/main/src/data/bootcamp-course-days.json"

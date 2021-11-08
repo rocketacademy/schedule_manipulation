@@ -13,7 +13,7 @@ class DayDetail extends StatelessWidget {
     return Card(
       color: Colors.grey.shade300,
       child: Container(
-        width: max(500, MediaQuery.of(context).size.width / 2),
+        width: MediaQuery.of(context).size.width / 3,
         child: Center(
           child: Column(
             children: [
