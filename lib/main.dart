@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Curriculum Visualizer'),
+      home: MyHomePage(),
     );
   }
 }
@@ -36,17 +36,16 @@ final classColors = {
 };
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+const dayItems = ['general', 'css', 'algos', 'ux', 'ip', 'projects'];
+
 class _MyHomePageState extends State<MyHomePage> {
   int currentDayDisplayed = 0;
   Map? data;
+  Map? dataFromJson;
 
   @override
   void initState() {
@@ -56,16 +55,65 @@ class _MyHomePageState extends State<MyHomePage> {
     getData();
   }
 
+  Map? applyChanges(Map? data) {
+    if (data == null) return null;
+
+    //cut from day 96
+    List days = data['days'];
+    days = days.sublist(0, 98);
+
+    print(days[0]['dateTypes'][dayItems[0]]);
+
+    //delete all Algorithms open practice
+    List tempDays = [];
+    for (int i = 0; i < days.length; i++) {
+      var day = days[i];
+
+      dayItems.forEach((topic) {
+        List? items;
+        items = day['dateTypes'][topic]['preClass']['items'];
+        items?.forEach((item) {
+          if (item.toString().contains('Open Practice')) {
+            day['dateTypes'][topic]['preClass']['items']
+                [items!.indexOf(item)] = {};
+          }
+        });
+
+        items = day['dateTypes'][topic]['inClass']['items'];
+        items?.forEach((item) {
+          if (item.toString().contains('Open Practice')) {
+            day['dateTypes'][topic]['inClass']['items']
+                [items!.indexOf(item)] = {};
+          }
+        });
+
+        items = day['dateTypes'][topic]['postClass']['items'];
+        items?.forEach((item) {
+          if (item.toString().contains('Open Practice')) {
+            // items!.remove(item);
+            day['dateTypes'][topic]['postClass']['items']
+                [items!.indexOf(item)] = {};
+          }
+        });
+      });
+    }
+
+    data['days'] = days;
+    return data;
+  }
+
   void getData() async {
     try {
-      // var jdata = await DefaultAssetBundle.of(context)
-      //     .loadString('data/bootcamp-core-96-days.json');
+      var jdata = await DefaultAssetBundle.of(context)
+          // .loadString('data/bootcamp-course-days.json');
+          .loadString('data/bootcamp-core-96-days.json');
 
-      // setState(() {
-      //   data = jsonDecode(jdata);
-      // });
+      setState(() {
+        data = jsonDecode(jdata);
+        // data = applyChanges(data);
+      });
 
-      data = bootcampData;
+      // data = bootcampData;
     } catch (e, s) {
       print('$e : $s');
     }
@@ -79,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text('Curriculum Visualizer'),
       ),
       body: Center(
         child: data == null
