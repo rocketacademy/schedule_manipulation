@@ -35,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int currentDayDisplayed = 0;
   int currentDayDisplayedOrig = 0;
   Map? data;
+  Map? dataOrig;
   Map? dataFromJson;
 
   @override
@@ -95,10 +96,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void getData() async {
     try {
       var tempData = await generateBlankBootcampData();
+      var temp2 =
+          await getBootcampDataFromJson('data/bootcamp-course-days.json');
       // await getBootcampDataFromJson('data/bootcamp-core-96-days.json');
 
       setState(() {
         data = tempData;
+        dataOrig = temp2;
         // data = applyChanges(data);
       });
 
@@ -138,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   CurriculumDayMap(data!, activeDayCallback: setActiveDay),
-                  CurriculumDayMap(bootcampData,
+                  CurriculumDayMap(dataOrig!,
                       activeDayCallback: setActiveDayOrig),
                   //newCurriculumDayMap(),
                   Expanded(
@@ -151,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 DayDetail(data?["days"][currentDayDisplayed])),
                         SingleChildScrollView(
                             child: DayDetail(
-                                bootcampData["days"][currentDayDisplayedOrig])),
+                                dataOrig?["days"][currentDayDisplayedOrig])),
                       ],
                     ),
                   ),

@@ -4,37 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:schedule_manipulation/constants.dart';
 
-var blankDay = {
-  "courseDay": -1,
-  "dateTypes": {
-    "module": "Module 1: Frontend Basics",
-    "general": {
-      "type": "general",
-      "preClass": {},
-      "inClass": {},
-      "postClass": {}
-    },
-    "css": {"type": "css", "preClass": {}, "inClass": {}, "postClass": {}},
-    "algos": {"type": "algos", "preClass": {}, "inClass": {}, "postClass": {}},
-    "ux": {"type": "ux", "preClass": {}, "inClass": {}, "postClass": {}},
-    "ip": {
-      "type": "ip",
-      "ipDue": {},
-      "preClass": {},
-      "inClass": {},
-      "postClass": {}
-    },
-    "projects": {
-      "type": "projects",
-      "projectStart": {},
-      "projectDue": {},
-      "preClass": {},
-      "inClass": {},
-      "postClass": {}
-    }
-  }
-};
-
 Map getBlankDay() {
   return {
     "courseDay": -1,
@@ -89,7 +58,7 @@ const Map bootcampDataHeaders = {
 
 Future<Map> generateBlankBootcampData() async {
   Map data = Map.from(bootcampDataHeaders);
-  const NUM_DAYS = 96;
+  const NUM_DAYS = 100;
   data['totalCourseDays'] = NUM_DAYS;
   data['days'] = List.generate(NUM_DAYS, (index) {
     Map day = getBlankDay();
@@ -110,6 +79,12 @@ Future<Map> loadAllData() async {
   List ux = await getBootcampDataFromJson('data/ux.json');
   List projects = await getBootcampDataFromJson('data/projects.json');
 
+  general = applyChangesToGeneral(general);
+  algos = applyChangesToAlgo(algos);
+  ux = applyChangesToUx(ux);
+  ip = applyChangesToIp(ip);
+  css = applyChangesToCss(css);
+
   return {
     'general': general,
     'algos': algos,
@@ -118,6 +93,88 @@ Future<Map> loadAllData() async {
     'ux': ux,
     'projects': projects,
   };
+}
+
+List applyChangesToGeneral(List general) {
+  //remove day 61, error. project implementation
+  general = removeDaysByIndex(general, dayIndexList: [61]);
+
+  //remove module 8: days 81 - 95
+  general = removeDaysByIndex(general,
+      dayIndexList: List.generate(15, (index) => index + 81));
+
+  return general;
+}
+
+List applyChangesToCss(List css) {
+  css = slideDaysByIndex(css, numOfDays: -5, dayIndexList: [35, 37, 38, 39]);
+  return css;
+}
+
+List applyChangesToAlgo(List algos) {
+  //remove open practice days
+  List toRemove = [];
+  algos.forEach((element) {
+    if (element.toString().contains('Open Practice') &&
+        !element.toString().contains('Bit')) toRemove.add(element);
+  });
+
+  toRemove.forEach((element) {
+    algos.remove(element);
+  });
+
+  //slide algos 15 days earlier
+  algos = slide(algos, numOfDays: -15);
+
+  return algos;
+}
+
+List applyChangesToUx(List ux) {
+  //move 20 days later
+  ux = slide(ux, numOfDays: 23);
+
+  return ux;
+}
+
+List applyChangesToIp(List ip) {
+  ip = slide(ip, numOfDays: -20);
+
+  return ip;
+}
+
+List slide(List l, {required int numOfDays}) {
+  l.forEach((element) {
+    element['dayIndex'] += numOfDays;
+  });
+  return l;
+}
+
+List slideDaysByIndex(List l,
+    {required int numOfDays, required List<int> dayIndexList}) {
+  dayIndexList.forEach((index) {
+    var dayToDelete = l.firstWhere((element) => element['dayIndex'] == index);
+    dayToDelete['dayIndex'] += numOfDays;
+  });
+  return l;
+}
+
+List slideToStart(List l) {
+  return slide(l, numOfDays: -l[0]['dayIndex']);
+}
+
+List removeDaysByIndex(List l, {required List dayIndexList}) {
+  dayIndexList.forEach((index) {
+    var dayToDelete = l.firstWhere((element) => element['dayIndex'] == index);
+    l.remove(dayToDelete);
+  });
+  return l;
+}
+
+List removeDays(List l, {required List dayList}) {
+  dayList.forEach((day) {
+    l.remove(day);
+  });
+  return l;
 }
 
 Future<Map> appendBootcampData(Map data) async {
