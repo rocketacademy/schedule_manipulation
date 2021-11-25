@@ -103,8 +103,8 @@ List applyChangesToGeneral(List general) {
   general = moveSingleDay(general, from: 58, to: 56);
 
   //remove module 8: days 81 - 95
-  general = removeDaysByIndex(general,
-      dayIndexList: List.generate(15, (index) => index + 81));
+  // general = removeDaysByIndex(general,
+  //     dayIndexList: List.generate(15, (index) => index + 81));
 
   return general;
 }
