@@ -46,52 +46,52 @@ class _MyHomePageState extends State<MyHomePage> {
     getData();
   }
 
-  Map? applyChanges(Map? data) {
-    if (data == null) return null;
+  // Map? applyChanges(Map? data) {
+  //   if (data == null) return null;
 
-    //cut from day 96
-    List days = data['days'];
-    days = days.sublist(0, 98);
+  //   //cut from day 96
+  //   List days = data['days'];
+  //   days = days.sublist(0, 98);
 
-    print(days[0]['dateTypes'][dayItems[0]]);
+  //   print(days[0]['dateTypes'][dayItems[0]]);
 
-    //delete all Algorithms open practice
-    List tempDays = [];
-    for (int i = 0; i < days.length; i++) {
-      var day = days[i];
+  //   //delete all Algorithms open practice
 
-      dayItems.forEach((topic) {
-        List? items;
-        items = day['dateTypes'][topic]['preClass']['items'];
-        items?.forEach((item) {
-          if (item.toString().contains('Open Practice')) {
-            day['dateTypes'][topic]['preClass']['items']
-                [items!.indexOf(item)] = {};
-          }
-        });
+  //   for (int i = 0; i < days.length; i++) {
+  //     var day = days[i];
 
-        items = day['dateTypes'][topic]['inClass']['items'];
-        items?.forEach((item) {
-          if (item.toString().contains('Open Practice')) {
-            day['dateTypes'][topic]['inClass']['items']
-                [items!.indexOf(item)] = {};
-          }
-        });
+  //     dayItems.forEach((topic) {
+  //       List? items;
+  //       items = day['dateTypes'][topic]['preClass']['items'];
+  //       items?.forEach((item) {
+  //         if (item.toString().contains('Open Practice')) {
+  //           day['dateTypes'][topic]['preClass']['items']
+  //               [items!.indexOf(item)] = {};
+  //         }
+  //       });
 
-        items = day['dateTypes'][topic]['postClass']['items'];
-        items?.forEach((item) {
-          if (item.toString().contains('Open Practice')) {
-            // items!.remove(item);
-            day['dateTypes'][topic]['postClass']['items']
-                [items!.indexOf(item)] = {};
-          }
-        });
-      });
-    }
+  //       items = day['dateTypes'][topic]['inClass']['items'];
+  //       items?.forEach((item) {
+  //         if (item.toString().contains('Open Practice')) {
+  //           day['dateTypes'][topic]['inClass']['items']
+  //               [items!.indexOf(item)] = {};
+  //         }
+  //       });
 
-    data['days'] = days;
-    return data;
-  }
+  //       items = day['dateTypes'][topic]['postClass']['items'];
+  //       items?.forEach((item) {
+  //         if (item.toString().contains('Open Practice')) {
+  //           // items!.remove(item);
+  //           day['dateTypes'][topic]['postClass']['items']
+  //               [items!.indexOf(item)] = {};
+  //         }
+  //       });
+  //     });
+  //   }
+
+  //   data['days'] = days;
+  //   return data;
+  // }
 
   void getData() async {
     try {
@@ -141,7 +141,9 @@ class _MyHomePageState extends State<MyHomePage> {
             : Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Text('Proposed PTBC Schedule'),
                   CurriculumDayMap(data!, activeDayCallback: setActiveDay),
+                  Text('Original FTBC/PTBC Schedule'),
                   CurriculumDayMap(dataOrig!,
                       activeDayCallback: setActiveDayOrig),
                   //newCurriculumDayMap(),
@@ -151,11 +153,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         SingleChildScrollView(
-                            child:
-                                DayDetail(data?["days"][currentDayDisplayed])),
+                            child: Column(
+                          children: [
+                            Text('Proposed PTBC Schedule'),
+                            DayDetail(data?["days"][currentDayDisplayed]),
+                          ],
+                        )),
                         SingleChildScrollView(
-                            child: DayDetail(
-                                dataOrig?["days"][currentDayDisplayedOrig])),
+                            child: Column(
+                          children: [
+                            Text('Original FTBC/PTBC Schedule'),
+                            DayDetail(
+                                dataOrig?["days"][currentDayDisplayedOrig]),
+                          ],
+                        )),
                       ],
                     ),
                   ),

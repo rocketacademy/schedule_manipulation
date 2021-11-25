@@ -55,13 +55,16 @@ class ClassListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-        tileColor: color,
-        leading: Text(
-          title,
-        ),
-        title:
-            isEmpty(classData) ? Text('none') : ClassItemsListing(classData));
+    return isEmpty(classData)
+        ? Container()
+        : ListTile(
+            tileColor: color,
+            leading: Text(
+              title,
+            ),
+            title: isEmpty(classData)
+                ? Text('none')
+                : ClassItemsListing(classData));
   }
 }
 

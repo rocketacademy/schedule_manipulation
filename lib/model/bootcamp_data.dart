@@ -58,7 +58,7 @@ const Map bootcampDataHeaders = {
 
 Future<Map> generateBlankBootcampData() async {
   Map data = Map.from(bootcampDataHeaders);
-  const NUM_DAYS = 100;
+  const NUM_DAYS = 116;
   data['totalCourseDays'] = NUM_DAYS;
   data['days'] = List.generate(NUM_DAYS, (index) {
     Map day = getBlankDay();
@@ -80,6 +80,7 @@ Future<Map> loadAllData() async {
   List projects = await getBootcampDataFromJson('data/projects.json');
 
   general = applyChangesToGeneral(general);
+  projects = applyChangesToProjects(projects);
   algos = applyChangesToAlgo(algos);
   ux = applyChangesToUx(ux);
   ip = applyChangesToIp(ip);
@@ -99,11 +100,40 @@ List applyChangesToGeneral(List general) {
   //remove day 61, error. project implementation
   general = removeDaysByIndex(general, dayIndexList: [61]);
 
+  general = moveSingleDay(general, from: 58, to: 56);
+
   //remove module 8: days 81 - 95
   general = removeDaysByIndex(general,
       dayIndexList: List.generate(15, (index) => index + 81));
 
   return general;
+}
+
+List applyChangesToProjects(List projects) {
+  // remove 1 ideation day from Project 2: day 26
+  projects = removeAndSlideBack(projects, startIndex: 26, numberOfDays: 1);
+  // remove 2 project days from Project 2: day 34-35
+  projects = removeAndSlideBack(projects, startIndex: 34, numberOfDays: 2);
+
+// remove 1 ideation day from Project 3: day 45
+  projects = removeAndSlideBack(projects, startIndex: 45, numberOfDays: 1);
+  // remove 2 project days from Project 3: day 52-53, then slide remaining.
+  projects = removeAndSlideBack(projects, startIndex: 52, numberOfDays: 2);
+
+// remove 1 ideation day from Project 4: day 61
+  projects = removeAndSlideBack(projects, startIndex: 61, numberOfDays: 1);
+  // remove 2 project days from Project 4: day 67-68, then slide remaining.
+  projects = removeAndSlideBack(projects, startIndex: 67, numberOfDays: 2);
+
+// remove 2 ideation day from Project 5: day 80,81
+  projects = removeAndSlideBack(projects, startIndex: 80, numberOfDays: 2);
+  // remove 2 project days from Project 5: day 86,87, then slide remaining.
+  projects = removeAndSlideBack(projects, startIndex: 86, numberOfDays: 2);
+
+  // remove 5 project days from Project 6: day 95-99, then slide remaining.
+  projects = removeAndSlideBack(projects, startIndex: 95, numberOfDays: 5);
+
+  return projects;
 }
 
 List applyChangesToCss(List css) {
@@ -124,14 +154,14 @@ List applyChangesToAlgo(List algos) {
   });
 
   //slide algos 15 days earlier
-  algos = slide(algos, numOfDays: -15);
+  // algos = slide(algos, numOfDays: -15);
 
   return algos;
 }
 
 List applyChangesToUx(List ux) {
   //move 20 days later
-  ux = slide(ux, numOfDays: 23);
+  ux = slide(ux, numOfDays: 21);
 
   return ux;
 }
@@ -142,9 +172,18 @@ List applyChangesToIp(List ip) {
   return ip;
 }
 
-List slide(List l, {required int numOfDays}) {
+List removeAndSlideBack(List l,
+    {required int startIndex, required int numberOfDays}) {
+  List indexList = List.generate(numberOfDays, (index) => startIndex + index);
+
+  l = removeDaysByIndex(l, dayIndexList: indexList);
+  l = slide(l, numOfDays: -numberOfDays, startingFrom: indexList.last);
+  return l;
+}
+
+List slide(List l, {required int numOfDays, int startingFrom = 0}) {
   l.forEach((element) {
-    element['dayIndex'] += numOfDays;
+    if (element['dayIndex'] > startingFrom) element['dayIndex'] += numOfDays;
   });
   return l;
 }
@@ -160,6 +199,13 @@ List slideDaysByIndex(List l,
 
 List slideToStart(List l) {
   return slide(l, numOfDays: -l[0]['dayIndex']);
+}
+
+List moveSingleDay(List l, {required int from, required int to}) {
+  var day = l.firstWhere((element) => element['dayIndex'] == from);
+  day['dayIndex'] = to;
+
+  return l;
 }
 
 List removeDaysByIndex(List l, {required List dayIndexList}) {
