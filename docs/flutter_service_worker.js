@@ -4,27 +4,28 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "84e9934a6f570c5236d3a011f585e53c",
-"index.html": "b76efb8d00bbe479f36b1310f0346271",
-"/": "b76efb8d00bbe479f36b1310f0346271",
-"main.dart.js": "f7db00a5454ac23ac9792c14786fbfee",
+"index.html": "608a0009ccdec43c06215dad12b25741",
+"/": "608a0009ccdec43c06215dad12b25741",
+"main.dart.js": "525ab093aab8e9dd2c2b154762261380",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "1abf76f30649869bb0300241ef2f08d6",
-"assets/AssetManifest.json": "e0cdb125318a5d1ee62064cdecd9e304",
-"assets/NOTICES": "bde9ee889e7cdb2c908965b81d635c52",
+"assets/AssetManifest.json": "45753960dc9db9af95e87c729f0a5e9a",
+"assets/NOTICES": "6aeca6bf2ffc2e73993faa4b70f5b8b6",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/assets/data/algos.json": "a3f90dbe3472d56be214de824cfc8734",
-"assets/assets/data/general.json": "7321310e08b3988ff692a6d48b4b614b",
-"assets/assets/data/ux.json": "cb38067b06ceb6d2f22c472455a56d48",
+"assets/assets/data/algos.json": "d2f06cffee999bc07fd659a5c5f39525",
+"assets/assets/data/general.json": "4c8dc3cb4161cc2ecd1d2cafd0732d0e",
+"assets/assets/data/ux.json": "58678a9239e8b5f84040857980d2c58e",
 "assets/assets/data/bootcamp-course-days.json": "3eba43b7d127ef417aaf9d22f57091c3",
 "assets/assets/data/basics-course-days.json": "e3a954ab8f8ddcdb389f0a000f2b1c15",
-"assets/assets/data/projects.json": "027a24c9d3747334d6d33515ecd4f685",
-"assets/assets/data/css.json": "7f5a3d09e71e86f625241944a4683fc5",
+"assets/assets/data/projects.json": "5bc058c4dd1728eed4db03b570e31a2b",
+"assets/assets/data/bootcamp-core-96-days.json": "84f3deec4874e14f4a5b3fd08126bec5",
+"assets/assets/data/css.json": "baacae1f51d73355cf55479244b522c8",
 "assets/assets/data/modules.json": "de9852851fc03c24b1d007dc53cb15c5",
-"assets/assets/data/ip.json": "2c472f5cfc4e70197d2bde349233c96f"
+"assets/assets/data/ip.json": "98ec976ffe070c2c05240cd62adff952"
 };
 
 // The application shell files that are downloaded before a service worker can
