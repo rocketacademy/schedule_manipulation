@@ -137,7 +137,7 @@ List applyChangesToProjects(List projects) {
 }
 
 List applyChangesToCss(List css) {
-  css = slideDaysByIndex(css, numOfDays: -5, dayIndexList: [35, 37, 38, 39]);
+  // css = slideDaysByIndex(css, numOfDays: -5, dayIndexList: [35, 37, 38, 39]);
   return css;
 }
 

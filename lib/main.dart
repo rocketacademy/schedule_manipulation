@@ -134,6 +134,22 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text('Curriculum Visualizer'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => SimpleDialog(children: [
+                    SingleChildScrollView(
+                      child: SelectableText(
+                        JsonEncoder.withIndent('    ').convert(data),
+                      ),
+                    ),
+                  ]),
+                );
+              },
+              icon: Icon(Icons.download_sharp))
+        ],
       ),
       body: Center(
         child: data == null
@@ -153,20 +169,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         SingleChildScrollView(
+                            controller: ScrollController(),
                             child: Column(
-                          children: [
-                            Text('Proposed PTBC Schedule'),
-                            DayDetail(data?["days"][currentDayDisplayed]),
-                          ],
-                        )),
+                              children: [
+                                Text('Proposed PTBC Schedule'),
+                                DayDetail(data?["days"][currentDayDisplayed]),
+                              ],
+                            )),
                         SingleChildScrollView(
+                            controller: ScrollController(),
                             child: Column(
-                          children: [
-                            Text('Original FTBC/PTBC Schedule'),
-                            DayDetail(
-                                dataOrig?["days"][currentDayDisplayedOrig]),
-                          ],
-                        )),
+                              children: [
+                                Text('Original FTBC/PTBC Schedule'),
+                                DayDetail(
+                                    dataOrig?["days"][currentDayDisplayedOrig]),
+                              ],
+                            )),
                       ],
                     ),
                   ),
