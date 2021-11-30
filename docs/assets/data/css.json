@@ -1,330 +1,330 @@
 [
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.1: Basic CSS (Exercises Part 1)",
-                    "url": "https://bootcamp.rocketacademy.co/css/css-1-basic-css"
-                }
-            ]
-        },
-        "inClass": {},
-        "postClass": {},
-        "dayIndex": 2
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.1: Basic CSS (Exercises Part 1)",
+          "url": "https://bootcamp.rocketacademy.co/css/css-1-basic-css"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.1: Basic CSS (Exercises Part 2)",
-                    "url": "https://bootcamp.rocketacademy.co/css/css-1-basic-css"
-                }
-            ]
-        },
-        "inClass": {},
-        "postClass": {},
-        "dayIndex": 3
+    "inClass": {},
+    "postClass": {},
+    "dayIndex": 2
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.1: Basic CSS (Exercises Part 2)",
+          "url": "https://bootcamp.rocketacademy.co/css/css-1-basic-css"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.2.1 No Layout",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.1-no-layout"
-                },
-                {
-                    "name": "CSS.2.2 Display Inline Block",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.2-display-inline-and-block"
-                }
-            ]
+    "inClass": {},
+    "postClass": {},
+    "dayIndex": 3
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.2.1 No Layout",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.1-no-layout"
         },
-        "inClass": {},
-        "postClass": {},
-        "dayIndex": 4
+        {
+          "name": "CSS.2.2 Display Inline Block",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.2-display-inline-and-block"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.2.3: Box Model",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.3-box-model"
-                },
-                {
-                    "name": "CSS.2.4: Layout Width",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.4-layout-fixed-width-and-max-width"
-                }
-            ]
+    "inClass": {},
+    "postClass": {},
+    "dayIndex": 4
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.2.3: Box Model",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.3-box-model"
         },
-        "inClass": {},
-        "postClass": {},
-        "dayIndex": 5
+        {
+          "name": "CSS.2.4: Layout Width",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.4-layout-fixed-width-and-max-width"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.2.5: Display Inline Block",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.5-display-inline-block"
-                },
-                {
-                    "name": "CSS.2.6: Layout Col / Card",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.6-layout-columns-and-cards"
-                }
-            ]
+    "inClass": {},
+    "postClass": {},
+    "dayIndex": 5
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.2.5: Display Inline Block",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.5-display-inline-block"
         },
-        "inClass": {},
-        "postClass": {},
-        "dayIndex": 6
+        {
+          "name": "CSS.2.6: Layout Col / Card",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.6-layout-columns-and-cards"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.2.7: Position",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.7-position"
-                },
-                {
-                    "name": "CSS.2.8: Float",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.8-float"
-                }
-            ]
+    "inClass": {},
+    "postClass": {},
+    "dayIndex": 6
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.2.7: Position",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.7-position"
         },
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.1: Straits Times",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.1-straits-times-css"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 7
+        {
+          "name": "CSS.2.8: Float",
+          "url": "https://bootcamp.rocketacademy.co/css/css.2-layout/css.2.8-float"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.3 Flexbox",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.3-flexbox"
-                }
-            ]
-        },
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.2: Wikipedia",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.2-css-practice-6-wikipedia"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 8
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.1: Straits Times",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.1-straits-times-css"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.3.1: Flexbox Columns",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.3-flexbox/css.3.1-flexbox-layout"
-                }
-            ]
-        },
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.4: Etsy",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.4-etsy-css"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 9
+    "postClass": {},
+    "dayIndex": 7
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.3 Flexbox",
+          "url": "https://bootcamp.rocketacademy.co/css/css.3-flexbox"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.4 Responsive Design",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.4-responsive-design"
-                },
-                {
-                    "name": "CSS.5: Web Design Basics",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.5-web-design-basics"
-                }
-            ]
-        },
-        "inClass": {},
-        "postClass": {},
-        "dayIndex": 10
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.2: Wikipedia",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.2-css-practice-6-wikipedia"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {},
-        "postClass": {
-            "items": [
-                {
-                    "name": "1.POCE.6: CSS Flexbox",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.1-technical-documentation-page-flexbox-responsive"
-                }
-            ]
-        },
-        "dayIndex": 12
+    "postClass": {},
+    "dayIndex": 8
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.3.1: Flexbox Columns",
+          "url": "https://bootcamp.rocketacademy.co/css/css.3-flexbox/css.3.1-flexbox-layout"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {},
-        "postClass": {
-            "items": [
-                {
-                    "name": "1.POCE.8: Flexbox Personal Page",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.2-flexbox-personal-page"
-                }
-            ]
-        },
-        "dayIndex": 14
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.4: Etsy",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.4-etsy-css"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {
-            "items": [
-                {
-                    "name": "CSS.6 Bootstrap",
-                    "url": "https://bootcamp.rocketacademy.co/css/css.6-bootstrap"
-                }
-            ]
+    "postClass": {},
+    "dayIndex": 9
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.4 Responsive Design",
+          "url": "https://bootcamp.rocketacademy.co/css/css.4-responsive-design"
         },
-        "inClass": {},
-        "postClass": {
-            "items": [
-                {
-                    "name": "1.POCE.9: Bootstrap",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.3-bootstrap-columns"
-                }
-            ]
-        },
-        "dayIndex": 15
+        {
+          "name": "CSS.5: Web Design Basics",
+          "url": "https://bootcamp.rocketacademy.co/css/css.5-web-design-basics"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {},
-        "postClass": {
-            "items": [
-                {
-                    "name": "1.POCE.10: Bootstrap Adobe",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.4-bootstrap-adobe"
-                }
-            ]
-        },
-        "dayIndex": 17
+    "inClass": {},
+    "postClass": {},
+    "dayIndex": 10
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {},
+    "postClass": {
+      "items": [
+        {
+          "name": "1.POCE.6: CSS Flexbox",
+          "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.1-technical-documentation-page-flexbox-responsive"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.POCE.10: Bootstrap Adobe",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.4-bootstrap-adobe"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 18
+    "dayIndex": 12
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {},
+    "postClass": {
+      "items": [
+        {
+          "name": "1.POCE.8: Flexbox Personal Page",
+          "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.2-flexbox-personal-page"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.4: MyTunes",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.3-mytunes"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 23
+    "dayIndex": 14
+  },
+  {
+    "type": "css",
+    "preClass": {
+      "items": [
+        {
+          "name": "CSS.6 Bootstrap",
+          "url": "https://bootcamp.rocketacademy.co/css/css.6-bootstrap"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.4: MyTunes",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.3-mytunes"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 24
+    "inClass": {},
+    "postClass": {
+      "items": [
+        {
+          "name": "1.POCE.9: Bootstrap",
+          "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.3-bootstrap-columns"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.5: Restaurant",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.5-trombones"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 35
+    "dayIndex": 15
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {},
+    "postClass": {
+      "items": [
+        {
+          "name": "1.POCE.10: Bootstrap Adobe",
+          "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.4-bootstrap-adobe"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.6: NTU",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.6-ntu"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 37
+    "dayIndex": 17
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.POCE.10: Bootstrap Adobe",
+          "url": "https://bootcamp.rocketacademy.co/css/1.poce.css-post-class-css-exercises/1.poce.css.4-bootstrap-adobe"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.7: Zillow",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.7-zillow"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 38
+    "postClass": {},
+    "dayIndex": 18
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.4: MyTunes",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.3-mytunes"
+        }
+      ]
     },
-    {
-        "type": "css",
-        "preClass": {},
-        "inClass": {
-            "items": [
-                {
-                    "name": "1.ICE.CSS.8: Chase Bank",
-                    "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.8-chase-bank"
-                }
-            ]
-        },
-        "postClass": {},
-        "dayIndex": 39
-    }
+    "postClass": {},
+    "dayIndex": 23
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.4: MyTunes",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.3-mytunes"
+        }
+      ]
+    },
+    "postClass": {},
+    "dayIndex": 24
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.5: Restaurant",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.5-restaurant"
+        }
+      ]
+    },
+    "postClass": {},
+    "dayIndex": 35
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.6: NTU",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.6-ntu"
+        }
+      ]
+    },
+    "postClass": {},
+    "dayIndex": 37
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.7: Zillow",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.7-zillow"
+        }
+      ]
+    },
+    "postClass": {},
+    "dayIndex": 38
+  },
+  {
+    "type": "css",
+    "preClass": {},
+    "inClass": {
+      "items": [
+        {
+          "name": "1.ICE.CSS.8: Chase Bank",
+          "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.8-chase-bank"
+        }
+      ]
+    },
+    "postClass": {},
+    "dayIndex": 39
+  }
 ]

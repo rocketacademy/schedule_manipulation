@@ -4,8 +4,8 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "84e9934a6f570c5236d3a011f585e53c",
-"index.html": "6e82be52403cc11793e101d6cd002a50",
-"/": "6e82be52403cc11793e101d6cd002a50",
+"index.html": "412d3868e838bf8ac694dba3ce5dcec4",
+"/": "412d3868e838bf8ac694dba3ce5dcec4",
 "main.dart.js": "97b4da86be2aa7cebd271c310775392d",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
@@ -16,16 +16,16 @@ const RESOURCES = {
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/assets/data/algos.json": "d2f06cffee999bc07fd659a5c5f39525",
-"assets/assets/data/general.json": "4c8dc3cb4161cc2ecd1d2cafd0732d0e",
-"assets/assets/data/ux.json": "58678a9239e8b5f84040857980d2c58e",
-"assets/assets/data/bootcamp-course-days.json": "3eba43b7d127ef417aaf9d22f57091c3",
+"assets/assets/data/algos.json": "6cc20ef59dadd23af3b71eed360c4154",
+"assets/assets/data/general.json": "52945817f1fa35658ffba20f442dd453",
+"assets/assets/data/ux.json": "37153583161f5678b092cc8371867b91",
+"assets/assets/data/bootcamp-course-days.json": "91dbed867c6aa13202ca470b312a1fb2",
 "assets/assets/data/basics-course-days.json": "e3a954ab8f8ddcdb389f0a000f2b1c15",
 "assets/assets/data/projects.json": "5bc058c4dd1728eed4db03b570e31a2b",
 "assets/assets/data/bootcamp-core-96-days.json": "84f3deec4874e14f4a5b3fd08126bec5",
-"assets/assets/data/css.json": "baacae1f51d73355cf55479244b522c8",
+"assets/assets/data/css.json": "212e58c6ac1095a01570d349713c5020",
 "assets/assets/data/modules.json": "de9852851fc03c24b1d007dc53cb15c5",
-"assets/assets/data/ip.json": "98ec976ffe070c2c05240cd62adff952"
+"assets/assets/data/ip.json": "d5413066d8dc3c308d651f429097a846"
 };
 
 // The application shell files that are downloaded before a service worker can
