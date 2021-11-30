@@ -1,34 +1,34 @@
 [
-    {
-        "type": "ux",
-        "preClass": {},
-        "inClass": {},
-        "postClass": {
-            "items": [
-                {
-                    "name": "UX.1: Overview",
-                    "url": "https://bootcamp.rocketacademy.co/user-experience/ux.1-overview"
-                },
-                {
-                    "name": "UX.2: The UX Process",
-                    "url": "https://bootcamp.rocketacademy.co/user-experience/ux.2-the-ux-process"
-                }
-            ]
+  {
+    "type": "ux",
+    "preClass": {},
+    "inClass": {},
+    "postClass": {
+      "items": [
+        {
+          "name": "UX.1: Overview",
+          "url": "https://bootcamp.rocketacademy.co/user-experience/ux.1-overview"
         },
-        "dayIndex": 24
+        {
+          "name": "UX.2: The UX Process",
+          "url": "https://bootcamp.rocketacademy.co/user-experience/ux.2-the-ux-process"
+        }
+      ]
     },
-    {
-        "type": "ux",
-        "preClass": {},
-        "inClass": {},
-        "postClass": {
-            "items": [
-                {
-                    "name": "UX.3: How to Design Your App",
-                    "url": "https://bootcamp.rocketacademy.co/user-experience/ux.3-how-to-design-your-app"
-                }
-            ]
-        },
-        "dayIndex": 25
-    }
+    "dayIndex": 24
+  },
+  {
+    "type": "ux",
+    "preClass": {},
+    "inClass": {},
+    "postClass": {
+      "items": [
+        {
+          "name": "UX.3: How to Design Your App",
+          "url": "https://bootcamp.rocketacademy.co/user-experience/ux.3-how-to-design-your-app"
+        }
+      ]
+    },
+    "dayIndex": 25
+  }
 ]
