@@ -100,11 +100,17 @@ List applyChangesToGeneral(List general) {
   //remove day 61, error. project implementation
   general = removeDaysByIndex(general, dayIndexList: [61]);
 
+  //move deploy to heroku closer to project 3 end.
   general = moveSingleDay(general, from: 58, to: 56);
 
+  general = slide(general, numOfDays: 1, startingFrom: 40);
+  general = slide(general, numOfDays: -2, startingFrom: 63);
+
+  general = slide(general, numOfDays: -2, startingFrom: 79);
+
   //remove module 8: days 81 - 95
-  // general = removeDaysByIndex(general,
-  //     dayIndexList: List.generate(15, (index) => index + 81));
+  general = removeDaysByIndex(general,
+      dayIndexList: List.generate(4, (index) => index + 89));
 
   return general;
 }
@@ -113,12 +119,14 @@ List applyChangesToProjects(List projects) {
   // remove 1 ideation day from Project 2: day 26
   projects = removeAndSlideBack(projects, startIndex: 26, numberOfDays: 1);
   // remove 2 project days from Project 2: day 34-35
-  projects = removeAndSlideBack(projects, startIndex: 34, numberOfDays: 2);
+  projects = removeAndSlideBack(projects, startIndex: 33, numberOfDays: 2);
+  // remove 2 project days from Project 2: day 34-35
+  projects = removeAndSlideBack(projects, startIndex: 37, numberOfDays: 2);
 
 // remove 1 ideation day from Project 3: day 45
   projects = removeAndSlideBack(projects, startIndex: 45, numberOfDays: 1);
   // remove 2 project days from Project 3: day 52-53, then slide remaining.
-  projects = removeAndSlideBack(projects, startIndex: 52, numberOfDays: 2);
+  projects = removeAndSlideBack(projects, startIndex: 52, numberOfDays: 3);
 
 // remove 1 ideation day from Project 4: day 61
   projects = removeAndSlideBack(projects, startIndex: 61, numberOfDays: 1);
@@ -132,6 +140,21 @@ List applyChangesToProjects(List projects) {
 
   // remove 5 project days from Project 6: day 95-99, then slide remaining.
   projects = removeAndSlideBack(projects, startIndex: 95, numberOfDays: 5);
+
+  projects = slide(projects, numOfDays: 4, startingFrom: 25);
+
+  projects = slide(projects, numOfDays: 4, startingFrom: 45);
+  projects = slide(projects, numOfDays: 2, startingFrom: 64);
+
+  projects = removeAndSlideBack(projects, startIndex: 77, numberOfDays: 1);
+  projects = removeAndSlideBack(projects, startIndex: 78, numberOfDays: 1);
+
+  projects = removeAndSlideBack(projects, startIndex: 82, numberOfDays: 1);
+  projects = slide(projects, numOfDays: -1, startingFrom: 78);
+
+  projects = removeAndSlideBack(projects, startIndex: 79, numberOfDays: 1);
+
+  projects = removeAndSlideBack(projects, startIndex: 95, numberOfDays: 3);
 
   return projects;
 }
