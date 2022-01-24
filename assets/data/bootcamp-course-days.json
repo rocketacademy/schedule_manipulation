@@ -11,7 +11,7 @@
       5
     ],
     "partTime": [
-      2,
+      1,
       6
     ]
   },
@@ -1645,10 +1645,6 @@
               {
                 "name": "3.2: EJS",
                 "url": "https://bootcamp.rocketacademy.co/3-backend-applications/3.2-ejs"
-              },
-              {
-                "name": "3.2.1: EJS Loops",
-                "url": "https://bootcamp.rocketacademy.co/3-3-backend-applications/3.2-ejs/3.2.1-ejs-loops"
               }
             ]
           },
@@ -2362,7 +2358,7 @@
             "items": [
               {
                 "name": "3.3.5: Non-FK Relationship Data in Join Table",
-                "url": "https://bootcamp.rocketacademy.co/3-3-backend-applications/3.3-sql-language/3.3.5-non-fk-relationship-data-in-join-table"
+                "url": "https://bootcamp.rocketacademy.co/3-backend-applications/3.3-sql-language/3.3.2-sql-relationships-one-to-many"
               },
               {
                 "name": "3.4.6: Forms for Many-to-Many Relationships",
@@ -2848,7 +2844,7 @@
             "items": [
               {
                 "name": "1.ICE.CSS.5: Restaurant",
-                "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.5-restaurant"
+                "url": "https://bootcamp.rocketacademy.co/css/1.ice.css-in-class-css-exercises/1.ice.css.5-trombones"
               }
             ]
           },
@@ -6047,20 +6043,27 @@
           "preClass": {
             "items": [
               {
-                "name": "A.10.1: Sorting Algorithms - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-sorting-algorithms/a.10.1-divide-and-conquer-sorting"
+                "name": "A.5.6: Trees - Pre-Class",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#pre-class"
               }
             ]
           },
           "inClass": {
             "items": [
               {
-                "name": "A.10.1: Sorting Algorithms - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-sorting-algorithms/a.10.1-divide-and-conquer-sorting"
+                "name": "A.5.6: Trees - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-1"
               }
             ]
           },
-          "postClass": {}
+          "postClass": {
+            "items": [
+              {
+                "name": "A.5.6: Trees - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-1"
+              }
+            ]
+          }
         },
         "ux": {
           "type": "ux",
@@ -6117,23 +6120,23 @@
         },
         "algos": {
           "type": "algos",
-          "preClass": {
-            "items": [
-              {
-                "name": "A.10.1: Sorting Algorithms - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-sorting-algorithms/a.10.1-divide-and-conquer-sorting"
-              }
-            ]
-          },
+          "preClass": {},
           "inClass": {
             "items": [
               {
-                "name": "A.10.1: Sorting Algorithms - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-sorting-algorithms/a.10.1-divide-and-conquer-sorting"
+                "name": "A.5.6: Trees - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-2"
               }
             ]
           },
-          "postClass": {}
+          "postClass": {
+            "items": [
+              {
+                "name": "A.5.6: Trees - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-2"
+              }
+            ]
+          }
         },
         "ux": {
           "type": "ux",
@@ -6200,16 +6203,23 @@
         },
         "algos": {
           "type": "algos",
-          "preClass": {
+          "preClass": {},
+          "inClass": {
             "items": [
               {
-                "name": "A.5.6: Trees - Pre-Class",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#pre-class"
+                "name": "A.5.6: Trees - Part 3",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-3"
               }
             ]
           },
-          "inClass": {},
-          "postClass": {}
+          "postClass": {
+            "items": [
+              {
+                "name": "A.5.6: Trees - Part 3",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-3"
+              }
+            ]
+          }
         },
         "ux": {
           "type": "ux",
@@ -6276,27 +6286,20 @@
           "preClass": {
             "items": [
               {
-                "name": "Trees  - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-1"
+                "name": "A.10: Sorting Algorithms - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-sorting-algorithms#divide-and-conquer"
               }
             ]
           },
           "inClass": {
             "items": [
               {
-                "name": "A.5.6: Trees - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-1"
+                "name": "A.10: Sorting Algorithms - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-sorting-algorithms#divide-and-conquer"
               }
             ]
           },
-          "postClass": {
-            "items": [
-              {
-                "name": "A.5.6: Trees - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-1"
-              }
-            ]
-          }
+          "postClass": {}
         },
         "ux": {
           "type": "ux",
@@ -6356,24 +6359,24 @@
           "preClass": {
             "items": [
               {
-                "name": "Trees - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-2"
+                "name": "A.11.1: Recursive Backtracking - Pre-Class",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.11-notable-patterns/a.11.1-recursive-backtracking#pre-class"
               }
             ]
           },
           "inClass": {
             "items": [
               {
-                "name": "A.5.6: Trees - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-2"
+                "name": "A.11.1: Recursive Backtracking - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.11-notable-patterns/a.11.1-recursive-backtracking#part-1"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.5.6: Trees - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-2"
+                "name": "A.11.1: Recursive Backtracking - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.11-notable-patterns/a.11.1-recursive-backtracking#part-1"
               }
             ]
           }
@@ -6519,16 +6522,16 @@
           "inClass": {
             "items": [
               {
-                "name": "A.5.6: Trees - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-3"
+                "name": "A.5.6: Trees - Part 4",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-4"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.5.6: Trees - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-3"
+                "name": "A.5.6: Trees - Part 4",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-4"
               }
             ]
           }
@@ -6611,22 +6614,8 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {
-            "items": [
-              {
-                "name": "A.5.6: Trees - Part 4",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-4"
-              }
-            ]
-          },
-          "postClass": {
-            "items": [
-              {
-                "name": "A.5.6: Trees - Part 4",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.6-trees#part-4"
-              }
-            ]
-          }
+          "inClass": {},
+          "postClass": {}
         },
         "ux": {
           "type": "ux",
@@ -6868,24 +6857,24 @@
           "preClass": {
             "items": [
               {
-                "name": "A.5.8: Heaps - Pre-Class",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#pre-class"
+                "name": "A.5.7: Graphs - Pre-Class",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs"
               }
             ]
           },
           "inClass": {
             "items": [
               {
-                "name": "A.5.8: Heaps - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.4-queues#part-1"
+                "name": "A.5.7: Graphs - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-1"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.5.8: Heaps - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.4-queues#part-1"
+                "name": "A.5.7: Graphs - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-1"
               }
             ]
           }
@@ -6960,16 +6949,16 @@
           "inClass": {
             "items": [
               {
-                "name": "A.5.8: Heaps - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#part-2"
+                "name": "A.5.7: Graphs - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-2"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.5.8: Heaps - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#part-2"
+                "name": "A.5.7: Graphs - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-2"
               }
             ]
           }
@@ -7044,12 +7033,19 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {},
+          "inClass": {
+            "items": [
+              {
+                "name": "A.5.8: Heaps - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.4-queues#part-1"
+              }
+            ]
+          },
           "postClass": {
             "items": [
               {
-                "name": "A.5.8: Heaps - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#part-3"
+                "name": "A.5.8: Heaps - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.4-queues#part-1"
               }
             ]
           }
@@ -7112,24 +7108,24 @@
           "preClass": {
             "items": [
               {
-                "name": "A.11.1: Recursive Backtracking - Pre-Class",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.11-notable-patterns/a.11.1-recursive-backtracking#pre-class"
+                "name": "A.5.8: Heaps - Pre-Class",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#pre-class"
               }
             ]
           },
           "inClass": {
             "items": [
               {
-                "name": "A.11.1: Recursive Backtracking - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.11-notable-patterns/a.11.1-recursive-backtracking#part-1"
+                "name": "A.5.8: Heaps - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#part-2"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.11.1: Recursive Backtracking - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.11-notable-patterns/a.11.1-recursive-backtracking#part-1"
+                "name": "A.5.8: Heaps - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#part-2"
               }
             ]
           }
@@ -7189,27 +7185,13 @@
         },
         "algos": {
           "type": "algos",
-          "preClass": {
-            "items": [
-              {
-                "name": "A.5.7: Graphs - Pre-Class",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs"
-              }
-            ]
-          },
-          "inClass": {
-            "items": [
-              {
-                "name": "A.5.7: Graphs - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-1"
-              }
-            ]
-          },
+          "preClass": {},
+          "inClass": {},
           "postClass": {
             "items": [
               {
-                "name": "A.5.7: Graphs - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-1"
+                "name": "A.5.8: Heaps - Part 3",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.8-heaps#part-3"
               }
             ]
           }
@@ -7306,9 +7288,30 @@
         },
         "algos": {
           "type": "algos",
-          "preClass": {},
-          "inClass": {},
-          "postClass": {}
+          "preClass": {
+            "items": [
+              {
+                "name": "A.9: Dynamic Programming - Pre-Class",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#pre-class"
+              }
+            ]
+          },
+          "inClass": {
+            "items": [
+              {
+                "name": "A.9: Dynamic Programming - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-1"
+              }
+            ]
+          },
+          "postClass": {
+            "items": [
+              {
+                "name": "A.9: Dynamic Programming - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-1"
+              }
+            ]
+          }
         },
         "ux": {
           "type": "ux",
@@ -7384,16 +7387,16 @@
           "inClass": {
             "items": [
               {
-                "name": "A.5.7: Graphs - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-2"
+                "name": "A.9: Dynamic Programming - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-2"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.5.7: Graphs - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs#part-2"
+                "name": "A.9: Dynamic Programming - Part 2",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-2"
               }
             ]
           }
@@ -7464,16 +7467,16 @@
           "inClass": {
             "items": [
               {
-                "name": "Graphs - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs"
+                "name": "A.9: Dynamic Programming - Part 3",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-3"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "Graphs - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs"
+                "name": "A.9: Dynamic Programming - Part 3",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-3"
               }
             ]
           }
@@ -7544,16 +7547,24 @@
           "inClass": {
             "items": [
               {
-                "name": "Graphs - Part 4",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
+              },
+              {
+                "name": "A.10: Bit Manipulation - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-bit-manipulation#part-1"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "Graphs - Part 4",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.5-data-structures/a.5.7-graphs"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
+              },
+              {
+                "name": "A.10: Bit Manipulation - Part 1",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-bit-manipulation#part-1"
               }
             ]
           }
@@ -7634,24 +7645,24 @@
           "preClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Pre-Class",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#pre-class"
+                "name": "A.10: Bit Manipulation - Pre-Class",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-bit-manipulation#pre-class"
               }
             ]
           },
           "inClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-1"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-1"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           }
@@ -7730,16 +7741,16 @@
           "inClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-2"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Part 2",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-2"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           }
@@ -7803,16 +7814,16 @@
           "inClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-3"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           },
           "postClass": {
             "items": [
               {
-                "name": "A.9: Dynamic Programming - Part 3",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.9-dynamic-programming#part-3"
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           }
@@ -7889,10 +7900,6 @@
               {
                 "name": "Algorithms Open Practice",
                 "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "A.10: Bit Manipulation - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-bit-manipulation#part-1"
               }
             ]
           },
@@ -7901,10 +7908,6 @@
               {
                 "name": "Algorithms Open Practice",
                 "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "A.10: Bit Manipulation - Part 1",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-bit-manipulation#part-1"
               }
             ]
           }
@@ -7964,14 +7967,7 @@
         },
         "algos": {
           "type": "algos",
-          "preClass": {
-            "items": [
-              {
-                "name": "A.10: Bit Manipulation - Pre-Class",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.10-bit-manipulation#pre-class"
-              }
-            ]
-          },
+          "preClass": {},
           "inClass": {
             "items": [
               {
@@ -8239,14 +8235,7 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {
-            "items": [
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              }
-            ]
-          },
+          "inClass": {},
           "postClass": {
             "items": [
               {
@@ -8470,14 +8459,7 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {
-            "items": [
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              }
-            ]
-          },
+          "inClass": {},
           "postClass": {
             "items": [
               {
@@ -8543,7 +8525,14 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {},
+          "inClass": {
+            "items": [
+              {
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
+              }
+            ]
+          },
           "postClass": {
             "items": [
               {
@@ -8795,7 +8784,14 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {},
+          "inClass": {
+            "items": [
+              {
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
+              }
+            ]
+          },
           "postClass": {
             "items": [
               {
@@ -9300,8 +9296,22 @@
         "algos": {
           "type": "algos",
           "preClass": {},
-          "inClass": {},
-          "postClass": {}
+          "inClass": {
+            "items": [
+              {
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.13-open-practice"
+              }
+            ]
+          },
+          "postClass": {
+            "items": [
+              {
+                "name": "Algorithms Open Practice",
+                "url": "https://bootcamp.rocketacademy.co/algorithms/a.13-open-practice"
+              }
+            ]
+          }
         },
         "ux": {
           "type": "ux",
@@ -9364,51 +9374,11 @@
               {
                 "name": "Algorithms Open Practice",
                 "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.13-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
               }
             ]
           },
           "postClass": {
             "items": [
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.13-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
-              {
-                "name": "Algorithms Open Practice",
-                "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
-              },
               {
                 "name": "Algorithms Open Practice",
                 "url": "https://bootcamp.rocketacademy.co/algorithms/a.12-open-practice"
