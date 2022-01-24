@@ -46,15 +46,6 @@ class _ModuleViewState extends State<ModuleView> {
     });
   }
 
-  List<Widget> buildModules() {
-    List<Widget> l = [];
-
-    l.add(Text('Live PTBC Schedule'));
-    l.add(CurriculumDayMap(dataPTBC!, activeDayCallback: setActiveDayPTBC));
-
-    return l;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,33 +57,41 @@ class _ModuleViewState extends State<ModuleView> {
       body: Center(
         child: dataPTBC == null
             ? CircularProgressIndicator()
-            : Column(
+            : Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('Live PTBC Schedule'),
-                  CurriculumDayMap(dataPTBC!,
-                      activeDayCallback: setActiveDayPTBC),
-                  ...buildModules()
-                  //newCurriculumDayMap(),
-                  // Expanded(
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //     crossAxisAlignment: CrossAxisAlignment.stretch,
-                  //     children: [
+                  // Text('Live PTBC Schedule'),
+                  Container(
+                      margin: EdgeInsets.all(16),
+                      color: Colors.grey,
+                      child: SingleChildScrollView(
+                        controller: ScrollController(),
+                        child: ModuleDayMap(dataPTBC!,
+                            activeDayCallback: setActiveDayPTBC),
+                      )),
+                  Container(
+                      margin: EdgeInsets.all(16),
+                      color: Colors.grey,
+                      child: SingleChildScrollView(
+                        controller: ScrollController(),
+                        child: ModuleDayMap(
+                          dataPTBC!,
+                          activeDayCallback: setActiveDayPTBC,
+                          uniformSize: true,
+                        ),
+                      )),
 
-                  //       SingleChildScrollView(
-                  //           controller: ScrollController(),
-                  //           child: Column(
-                  //             children: [
-                  //               Text('Live PTBC Schedule'),
-                  //               DayDetail(
-                  //                   dataPTBC?["days"][currentDayDisplayedPTBC]),
-                  //             ],
-                  //           )),
-
-                  //     ],
-                  //   ),
-                  // ),
+                  Expanded(
+                    flex: 2,
+                    child: SingleChildScrollView(
+                        controller: ScrollController(),
+                        child: Column(
+                          children: [
+                            Text('Live PTBC Schedule'),
+                            DayDetail(dataPTBC?["days"][currentDayDisplayed]),
+                          ],
+                        )),
+                  ),
                 ],
               ),
       ),
